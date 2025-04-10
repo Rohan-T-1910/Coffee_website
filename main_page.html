@@ -71,7 +71,7 @@
 
             <div class="product-card fade-up">
                 <div class="product-image">
-                    <img src="coffee_image_2.jpg" alt="NESCAFÉ Classic">
+                    <img src="/images/gold_blend.jpg" alt="NESCAFÉ Classic">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">NESCAFÉ Classic</h3>
@@ -265,11 +265,15 @@
     </section>
 
     <!-- Cart Sidebar -->
+    <!-- Cart Sidebar -->
     <div class="cart-sidebar">
-        <button class="cart-close"><i class="fas fa-times"></i></button>
+        <button class="cart-close">✕</button>
         <h3>Your Cart</h3>
-        <div class="cart-items"></div>
-        <button class="checkout-btn">Checkout</button>
+        <div class="cart-items" id="cartItems"></div>
+        <button class="checkout-btn" onclick="goToCheckout()">Checkout</button>
     </div>
+    <div class="cart-backdrop"></div>
+    
+
 </body>
 </html>

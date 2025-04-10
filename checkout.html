@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <div class="total-amount" id="totalAmountDisplay">Total: ₹0.00</div>
+
+    <!-- Payment Method Section -->
+    <div class="payment-methods">
+      <h3>Select Payment Method</h3>
+
+      <!-- Google Pay -->
+      <label>
+        <input type="radio" name="payment" value="gpay" checked> Google Pay
+      </label>
+      <div id="gpay-button"></div>
+
+      <!-- UPI -->
+      <label>
+        <input type="radio" name="payment" value="upi"> UPI
+      </label>
+      <input type="text" id="upiInput" placeholder="Enter your UPI ID" class="hidden">
+
+      <!-- Credit/Debit Card -->
+      <label>
+        <input type="radio" name="payment" value="card"> Credit/Debit Card
+      </label>
+      <input type="text" id="cardInput" placeholder="Card Number" class="hidden">
+
+      <!-- Cash on Delivery -->
+      <label>
+        <input type="radio" name="payment" value="cod"> Cash on Delivery
+      </label>
+    </div>
+
+    <!-- Place Order Button -->
+    <button class="place-order-btn">Place Order</button>
+  </div>
+
+  <!-- Google Pay JS -->
+  <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+
+  <!-- Your Checkout Script -->
+  <script src="checkout.js"></script>
+</body>
+</html>

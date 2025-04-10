@@ -1,0 +1,108 @@
+/* Color Palette */
+:root {
+    --dark-brown: #3e2723;
+    --light-brown: #a1887f;
+    --cream: #f5f5dc;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-brown);
+}
+
+/* Container */
+.checkout-container {
+    background-color: var(--white);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.checkout-container h1 {
+    text-align: center;
+    color: var(--dark-brown);
+    margin-bottom: 30px;
+}
+
+/* Total Amount */
+.total-amount {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+/* Payment Methods Section */
+.payment-methods {
+    margin-top: 20px;
+}
+
+.payment-methods h3 {
+    margin-bottom: 10px;
+    color: var(--dark-brown);
+}
+
+.payment-methods label {
+    display: block;
+    margin: 12px 0 5px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark-brown);
+}
+
+.payment-methods input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--light-brown);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Google Pay Button */
+#gpay-button {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+}
+
+/* Place Order Button */
+.place-order-btn {
+    width: 100%;
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.place-order-btn:hover {
+    background-color: var(--light-brown);
+    color: var(--black);
+}
+
+/* Hidden Input Fields */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .checkout-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login_page.css">
     <title>Login Page</title>
+
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="login_page.css">
+
+    <!-- Google Identity Services Script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <div class="login-container">
@@ -12,6 +17,7 @@
             <h1 class="login-title">Welcome Back</h1>
             <p class="login-subtitle">Log in to your account</p>
             
+            <!-- Traditional login form -->
             <form action="#" method="POST">
                 <div class="input-group">
                     <label for="email">Email Address</label>
@@ -26,11 +32,36 @@
                 <button type="submit" class="login-btn">Log In</button>
             </form>
 
+            <!-- Google Sign-In Button -->
+            <div id="g_id_onload"
+                data-client_id="604847348916-kpqdovpbt18d7aias80mqeuhtbj19e0k.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin google-btn"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="filled_black"
+                data-text="sign_in_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
+
+            <!-- Display logged-in user name (optional) -->
+            <div id="user-info" style="display: none; margin-top: 20px;">
+                <p><strong>Logged in as:</strong> <span id="user-name"></span></p>
+            </div>
+
+            <!-- Other login options -->
             <div class="login-options">
                 <a href="#">Forgot Password?</a>
                 <a href="#">Create Account</a>
             </div>
         </div>
     </div>
+
+    <!-- Your custom JavaScript file -->
+    <script src="login_page.js"></script>
 </body>
 </html>

@@ -108,3 +108,38 @@ body {
 .login-options a:hover {
     color: var(--cream);
 }
+
+/* Google Sign-In Styling */
+.g_id_signin {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.g_id_signin iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 50px !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(188, 138, 95, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--black) !important;
+}
+
+/* User info display */
+#user-info {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    color: var(--cream);
+    margin-top: 0;
+    font-size: 0.95em;
+}
+
+
+#g_id_onload {
+    display: none;
+}
+
